@@ -6,11 +6,12 @@ public class pelota : MonoBehaviour
 {
     Rigidbody ballRG;
     [SerializeField] float forceJump = 5f;
-    // Start is called before the first frame update
+    [SerializeField] GameObject trail;
     void Start()
     {
         //ver videos en youtube de como hacer esto
         ballRG = GetComponent <Rigidbody>();
+        trail.SetActive(false);
     }
 
     private void OnCollisionEnter(Collision collision)
